@@ -1,0 +1,205 @@
+body {
+    font: 15px/1.5 Arial, Helvetica;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.button {
+    height: 35px;
+    background-color: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.dark {
+    padding: 20px;
+    background-color: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*header*/
+header {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 30px 0 10px 0;
+    border-bottom: #000000 solid 3px;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ffff00;
+    font-weight: bold;
+}
+
+/*showcase and add background image, note x and y co-ordinates*/
+#showcase {
+    min-height: 500px;
+    background :url('../images/sunset.jpg') no-repeat 0;
+   /*background-position-x: 100%;
+    background-position-y: 50%;
+    same as the 0 in background positioning after the URL*/
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1 {
+    margin-top: 70px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+/*newsletter*/
+#newsletter {
+    padding: 20px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float: right;
+    margin-top: 25px;
+}
+
+#newsletter input[type="email"] {
+    padding: 3px;
+    height: 25px;
+    width: 300px;
+}
+
+/*columns*/
+#columns {
+    margin-top: 20px;
+}
+
+#columns .container {
+    display: flex;
+    flex-wrap: nowrap; /*this is the default so that items stay on one line*/
+    justify-content: space-between;
+}
+
+#columns .container .boxes h3,p {    
+   text-align: center;  
+}
+
+#columns .container .boxes img {  
+  object-fit:contain;
+  width: 100%;
+  height: 50vh; 
+}
+
+article#main-column {
+    float: left;
+    width: 65%;
+    padding-bottom: 5px;
+}
+
+aside#side-bar {
+    float: right;
+    width: 30%;
+}
+
+aside#side-bar .hola input {
+    width: 90%;
+    padding: 5px;
+}
+
+ul#services {
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    background-color: #e6e6e6;
+}
+
+footer {
+    background-color: #e8491d;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/*media queries*/
+@media (max-width: 768px) {
+   header#branding, header nav li, #newsletter h1, #newsletter form, article#main-column, aside#side-bar {
+   float: none;
+   width: 100%;
+   text-align: center;
+   }
+
+   header {
+       padding-bottom: 20px;
+   }
+
+   #newsletter button, aside#side-bar .hola button {
+       display: block;
+       width: 100%;
+   }
+
+   #newsletter form input[type="email"] {
+        width: 100%;
+        margin-bottom: 5px;
+   }
+
+   #columns .container {
+    display: flex;
+    flex-wrap: wrap; /*this is to allow the images to overlap on multiline when the screen is small*/
+    justify-content: space-between;
+   }
+
+ aside#side-bar .dark ul {
+     list-style: none;
+ }
